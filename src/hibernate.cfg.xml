@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/adamingpark?serverTimezone=UTC</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.connection.pool_size">20</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="hbm2ddl.auto">create</property>
+
+        <mapping class="com.fr.adaming.entity.Admin" />
+        <mapping class="com.fr.adaming.entity.Personne" />
+        <mapping class="com.fr.adaming.entity.Billet" />
+        <mapping class="com.fr.adaming.entity.Client" />
+        <mapping class="com.fr.adaming.entity.Candidat" />
+        <mapping class="com.fr.adaming.entity.Attraction" />
+        <mapping class="com.fr.adaming.entity.Type" />
+        <mapping class="com.fr.adaming.entity.Photo" />
+    </session-factory>
+</hibernate-configuration>
