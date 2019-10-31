@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<h:head>
+	<title>index_client</title>
+	<link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/index.css" />
+	<!-- theo corneloup -->
+</h:head>
+
+<h:body>
+<ui:include src="header_client.xhtml"/>
+	<div class="affichage">
+	<div style="height: 20px"></div>
+		<div class="montagne_russe">
+			 <p:panelGrid styleClass="ui-noborder" columns="2">
+					<p:graphicImage name="images/montagne_russe.jpg" style="height:250px; width:80%; border-radius:20px" />
+					<h1 ><u><i>#{msg['page-attraction_client.titreMR']}</i></u></h1>
+					<h3>#{msg['page-attraction_client.descMR']}</h3>
+			</p:panelGrid>
+		</div>
+		<div style="height: 20px"></div>
+		<div class="maison_hantee">
+				<p:panelGrid columns="2" styleClass="ui-noborder">
+					<h1><u><i>#{msg['page-attraction_client.titreMH']}</i></u></h1>
+					<h3>#{msg['page-attraction_client.descMH']}</h3>
+					<p:graphicImage name="images/maison_hantee.jpg"
+						style="height:250px; width:100%; border-radius:20px"/>
+				</p:panelGrid>
+		</div>
+		<div style="height: 20px"></div>
+		<div class="carrousel">
+			<p:panelGrid columns="2" styleClass="ui-noborder">
+					<p:graphicImage name="images/carroussel.jpg"
+						style="height:250px; width:100%; border-radius:20px" />
+					<h1><u><i>#{msg['page-attraction_client.titreCarroussel']}</i></u></h1>
+					<h3>#{msg['page-attraction_client.descCarroussel']}</h3>
+			</p:panelGrid>
+		</div>
+		<div style="height: 20px"></div>
+		<div class="bateau">
+			<p:panelGrid columns="2" styleClass="ui-noborder">
+					<h1><u><i>#{msg['page-attraction_client.titreBateau']}</i></u></h1>
+					<h3>#{msg['page-attraction_client.descBateau']}</h3>
+					<p:graphicImage name="images/bateau.jpg" style="height:200px; width:100%; border-radius:20px" />
+				</p:panelGrid>
+		<div style="height: 20px"></div>
+		</div>
+		<div class="roue">
+			<p:panelGrid columns="2" styleClass="ui-noborder">
+					<p:graphicImage name="images/roue.jpg" style="height:200px; width:80%; border-radius:20px" />
+					<h1><u><i>#{msg['page-attraction_client.titreRoue']}</i></u></h1>
+					<h3>#{msg['page-attraction_client.descRoue']}</h3>
+				</p:panelGrid>
+		<div style="height: 20px"></div>
+		</div>
+		<div class="manege_enfant">
+			<p:panelGrid columns="2" styleClass="ui-noborder">
+					<h1><u><i>#{msg['page-attraction_client.titreME']}</i></u></h1>
+					<h3>#{msg['page-attraction_client.descME']}</h3>
+					<p:graphicImage name="images/manege_enfant.jpg" style="height:200px; width:100%; border-radius:20px" />
+				</p:panelGrid>
+		<div style="height: 20px"></div>
+		</div>
+	</div>
+<ui:include src="footer_client.xhtml"/>
+</h:body>
+
+</html>
+

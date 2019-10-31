@@ -1,0 +1,132 @@
+div {
+	text-align: center;
+	color: black;
+	text-align: center
+}
+
+#bandeau {
+	width: all;
+	height: 50px;
+	background-color: #FFCCFF;
+}
+
+#menug {
+	float: left;
+	width: 20%;
+	height: 400px;
+	background-color: #FF6699;
+}
+
+#menud {
+	float: right;
+	width: 20%;
+	height: 400px;
+	background-color: #FF6699;
+}
+
+#contenu {
+	float: middle width:100%;
+	background-color: #C8DEE9;
+}
+
+#pied_page {
+	clear: both;
+	width: all;
+	height: 50px;
+	background-color: #c0c0c0;
+}
+
+.container {
+	padding-right: 20%;
+	padding-left: 20%;
+	margin-right: auto;
+	margin-left: auto;
+}
+#formulaire {
+	padding-top: 5%;
+	padding-bottom: 5%;
+	padding-left: 5%;
+	padding-right: 5%;
+	text-align:left;
+	background: #ffffff;
+	border-radius: 20px;
+}
+
+#formulaire .site-btn {
+    display: inline-block;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 167px;
+    padding: 18px 47px 14px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    background: ##F19019;
+    color: #F0C300;
+    line-height: normal;
+    cursor: pointer;
+    text-align: center;
+}
+
+.contact-form input, .contact-form textarea {
+	width: 50%;
+	height: 44px;
+	border: none;
+	padding: 0 18px;
+	background: #f0f0f0;
+	border-radius: 40px;
+	margin-bottom: 17px;
+	font-size: 14px;
+}
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tableau td,#tableau th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.tableau tr:nth-child(even){background-color: #f2f2f2;}
+
+.tableau tr:hover {background-color: #ddd;}
+
+.tableau th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #7FC6E9;
+  color: white;
+}
+
+.affichage {
+	text-align: center;
+	color: black;
+	padding-left : 20%;
+	padding-right: 20%;
+	text-decoration: none;
+	background-image: url(../images/fond.jpg);
+	background-size: 100%;
+}
+.ui-noborder{
+	background-color: none;
+	border-color: yellow;
+	border-style: solid;
+	border-radius: 20px;
+	
+}
+a {
+	text-decoration: none;
+}
+
+.ui-g div {
+    background-color: #ededed;
+    text-align: center;
+}
+
+.value {
+        font-weight: bold;
+    }
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<!-- Developpeurs : Bilel Abbas   -->
+
+<h:head>
+	<title>#{msg['page-register.form.head']}</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</h:head>
+<h:body>
+
+ <div id="contenu">
+ 
+ 
+ <ui:include src="header_client.xhtml" />
+
+
+
+
+
+	<h1>#{msg['page-register.form.title']}</h1>
+	
+	
+	
+	<h:form class="contact-form">
+	<div class="container">
+	<div id="formulaire">
+		<h:panelGrid columns="3">
+
+			<h:outputLabel value="#{msg['page-register.form.nom']} :"></h:outputLabel>
+			<h:inputText value="#{registerMB.nom}" id="id_nom" required="true"
+				requiredMessage="Choisir un nom ">
+			</h:inputText>
+			<h:message for="id_nom"></h:message>
+
+			<h:outputLabel value="#{msg['page-register.form.prenom']} :"></h:outputLabel>
+			<h:inputText value="#{registerMB.prenom}" id="id_prenom"
+				required="false" >
+			</h:inputText>
+			<h:message for="id_prenom"></h:message>
+
+			<h:outputLabel value="Email :"></h:outputLabel>
+			<h:inputText value="#{registerMB.email}" id="id_email" required="true"
+				requiredMessage="Ce champ est obligatoire" validatorMessage="Je veux un email">
+				<f:validateRegex
+					pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]">
+				</f:validateRegex>
+			</h:inputText>
+			<h:message for="id_email"></h:message>
+
+			<h:outputLabel value="#{msg['page-login.form.username']} :"></h:outputLabel>
+			<h:inputText value="#{registerMB.username}" id="id_username"
+				required="true" requiredMessage="Choisir un nom d'utilisateur">
+			</h:inputText>
+			<h:message for="id_username"></h:message>
+
+			<h:outputLabel value="#{msg['page-login.form.pwd']} :"></h:outputLabel>
+			<h:inputSecret value="#{registerMB.pwd}" id="id_pwd" required="true"
+				validatorMessage="Ce champ doit faire entre 8 et 12 caractères"
+				requiredMessage="Ce champ est obligatoire">
+				<f:validateLength maximum="12" minimum="8"></f:validateLength>
+			</h:inputSecret>
+			<h:message for="id_pwd"></h:message>
+
+			
+
+		</h:panelGrid>
+		<h:commandButton value="#{msg['page-register.form.submit']}" action="#{registerMB.register}"></h:commandButton>
+	 
+		</div>
+	</div>
+	</h:form>
+	
+		
+	
+	<ui:include src="footer_client.xhtml" />
+	</div>
+	
+</h:body>
+</html>

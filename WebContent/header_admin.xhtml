@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--Ambroise RENE  -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<h:head>
+	<title>header</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+</h:head>
+
+<h:body>
+	<div class="ui-g">
+
+		<div class="ui-g-11">
+			<h:graphicImage value="img/client/header/adaming-land.png" />
+		</div>
+		<div class="ui-g-1">
+			<h:form>
+				<p:commandLink action="#{langageMB.change('en')}" update="@all">
+					<h:graphicImage width="50px" value="img/client/header/en.png" />
+				</p:commandLink>
+
+				<p:commandLink action="#{langageMB.change('fr')}" update="@all">
+					<h:graphicImage width="55px" value="img/client/header/fr.jpg" />
+				</p:commandLink>
+			</h:form>
+		</div>
+	</div>
+	<h:form>
+		<p:menubar>
+	
+			<p:submenu label="Billet">
+				<p:menuitem value="Créer billet" url="CreerBilletAdmin.xhtml"></p:menuitem>
+				<p:separator />
+				<p:menuitem value="Afficher" url="AfficherBillet.xhtml"></p:menuitem>
+			</p:submenu>
+			<p:submenu label="Attraction">
+				<p:menuitem value="Créer" url="CreerAttraction.xhtml"></p:menuitem>
+				<p:separator />
+				<p:menuitem value="Afficher" url="AfficherAttractions.xhtml"></p:menuitem>
+			</p:submenu>
+			<p:submenu label="Administrateur">
+				<p:menuitem value="Ajouter" url="admin.xhtml"></p:menuitem>
+				<p:separator />
+				<p:menuitem value="Afficher" url="AfficherAdmin.xhtml"></p:menuitem>
+			</p:submenu>
+			<p:submenu label="Candidat">
+				<p:menuitem value="Candidatures" url="AfficherCandidatures.xhtml"></p:menuitem>
+			</p:submenu>
+			
+		</p:menubar>
+		<div>
+		<h:commandButton value="Se déconnecter" url="#" action="#{a.B}"></h:commandButton>
+		</div>
+	</h:form>
+
+	<hr></hr>
+
+</h:body>
+
+</html>

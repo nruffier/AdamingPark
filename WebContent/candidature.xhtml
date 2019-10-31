@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<!-- Développeur : Julie Noterman  -->
+<h:head>
+	<title>#{msg['page-candidat.name']}</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css"></link>
+</h:head>
+
+<h:body>
+	<ui:include src="header_client.xhtml"></ui:include>
+
+	<div id="contenu">
+	<br></br>
+	<h2><h:outputLabel value="#{msg['page-candidat.title']}"></h:outputLabel></h2>
+	<br></br>
+	<h:form class="contact-form">
+	<div class="container">
+		<div id="formulaire">
+		<h:panelGrid columns="3">
+			<h:outputLabel value="#{msg['page-candidat.form.nom']}"></h:outputLabel>
+			<h:inputText value="#{candidatMB.nom}" id="id_nom" required="true"
+				requiredMessage="#{msg['page.form.required']}"></h:inputText>
+			<h:message for="id_nom"></h:message>
+
+			<h:outputLabel value="#{msg['page-candidat.form.prenom']}"></h:outputLabel>
+			<h:inputText value="#{candidatMB.prenom}" id="id_prenom" required="false"></h:inputText>
+			<h:message for="id_prenom"></h:message>
+
+			<h:outputLabel value="#{msg['page-candidat.form.email']}"></h:outputLabel>
+			<h:inputText value="#{candidatMB.email}" id="id_email" required="true"
+				validatorMessage="#{msg['page.form.validate']}"
+				requiredMessage="#{msg['page.form.required']}">
+				<f:validateRegex
+					pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]"></f:validateRegex>
+			</h:inputText>
+			<h:message for="id_email"></h:message>
+
+			<h:outputLabel value="#{msg['page-candidat.form.tel']}"></h:outputLabel>
+			<h:inputText value="#{candidatMB.tel}" id="id_tel" required="false"></h:inputText>
+			<h:message for="id_tel"></h:message>
+			
+			<h:outputLabel value="#{msg['page-candidat.form.cv']}"></h:outputLabel>
+			<h:inputText id="id_cv" value="#{candidatMB.cv}" > </h:inputText>
+			<h:outputLabel value=""></h:outputLabel>
+		
+			
+			<h:outputLabel value="#{msg['page-candidat.form.lm']}"></h:outputLabel>
+			<h:inputText id="id_lm" value="#{candidatMB.lm}"> </h:inputText>
+
+			<!-- <h:outputLabel value="#{msg['page-candidat.form.cv']}"></h:outputLabel>
+			<input type="file" id="cv" name="cv" accept=".doc, .pdf, .docx" value="#{candidatMB.cv}" class=""> </input>
+			<h:outputLabel value=""></h:outputLabel>
+		
+			
+			<h:outputLabel value="#{msg['page-candidat.form.lm']}"></h:outputLabel>
+			<input type="file" id="lm" name="lm" accept=".doc, .pdf, .docx" value="#{candidatMB.lm}"> </input> -->
+		</h:panelGrid>
+		<div>
+		<h:commandButton action="#{candidatMB.ajouter()}" value="#{msg['page-candidat.form.submit']}" id="site-btn"></h:commandButton>
+		</div>
+		</div>
+		
+		</div>
+		
+	</h:form>
+	<div style="height: 50px"></div>
+	</div>
+	
+
+
+	<ui:include src="footer_client.xhtml"></ui:include>
+</h:body>
+
+</html>

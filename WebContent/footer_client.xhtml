@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<h:head>
+	<title>footer</title>
+</h:head>
+
+<h:body>
+	<hr></hr>
+
+
+			<span>Copyright &copy; By Adaming team </span> <a href="login.xhtml">"#{msg['page-footer_client.connect']}"</a>
+
+			<hr></hr>
+			<p:dock position="bottom">
+				<p:menuitem value="#{msg['page-footer_client.accueil']}"
+					icon="/img/client/footer/accueil.png" url="index_client.xhtml" />
+				<p:menuitem value="#{msg['page-footer_client.attraction']}"
+					icon="/img/client/footer/attraction.jpg" url="#" />
+				<p:menuitem value="#{msg['page-footer_client.venir']}"
+					icon="/img/client/footer/chemin.png" url="about.xhtml" />
+				<p:menuitem value="#{msg['page-footer_client.billet']}"
+					icon="/img/client/footer/ticket.jpg" url="achatBillet.xhtml" />
+				<p:menuitem value="#{msg['page-footer_client.rejoindre']}"
+					icon="/img/client/footer/rejoindre.png" url="candidature.xhtml" />
+				<p:menuitem value="#{msg['page-footer_client.contact']}"
+					icon="/img/client/footer/contact.png" url="about.xhtml" />
+				<p:menuitem value="#{msg['page-footer_client.propos']}"
+					icon="/img/client/footer/propos.png" url="about.xhtml" />
+			</p:dock>
+
+</h:body>
+
+</html>

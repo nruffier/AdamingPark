@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+	version="2.0">
+
+	<application>
+		<locale-config>
+			<default-locale>fr</default-locale>
+			<supported-locale>en</supported-locale>
+		</locale-config>
+		<resource-bundle>
+			<base-name>message</base-name>
+			<var>msg</var>
+		</resource-bundle>
+	</application>
+	
+	
+	<navigation-rule>
+		<from-view-id>login.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>SUCCESS</from-outcome>
+			<to-view-id>indexAdmin.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>FAIL</from-outcome>
+			<to-view-id>login.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>CreerAttraction.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>SUCCESS</from-outcome>
+			<to-view-id>CreerAttraction.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>AfficherAttractions.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>SUCCESS</from-outcome>
+			<to-view-id>ModifierAttraction.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>ModifierAttraction.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>SUCCESS</from-outcome>
+			<to-view-id>AfficherAttractions.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>AfficherAdmin.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>SUCCESS</from-outcome>
+			<to-view-id>UpdateAdmin.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+</faces-config>

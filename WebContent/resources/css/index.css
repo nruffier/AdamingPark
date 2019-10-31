@@ -1,0 +1,19 @@
+.affichage {
+	text-align: center;
+	color: black;
+	padding-left : 20%;
+	padding-right: 20%;
+	text-decoration: none;
+	background-image: url(../images/fond.jpg);
+	background-size: 100%;
+}
+.ui-noborder{
+	background-color: none;
+	border-color: yellow;
+	border-style: solid;
+	border-radius: 20px;
+	
+}
+a {
+	text-decoration: none;
+}

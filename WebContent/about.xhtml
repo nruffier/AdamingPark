@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+	
+<!-- Developpeurs : Bilel Abbas et Theo Corneloup -->
+
+<h:head>
+	<title>#{msg['page-about.form.head']}</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"></link>
+</h:head>
+
+<h:body>
+
+<div id="contenu">
+
+ <ui:include src="header_client.xhtml"></ui:include>
+
+
+
+<h1><u>#{msg['page-about.form.title']}</u></h1>
+<div class="container">
+		<div id="formulaire">
+<br></br>
+<p> #{msg['page-about.form.paragraphe1']}</p>
+<p> #{msg['page-about.form.paragraphe2']}</p>
+<p>#{msg['page-about.form.paragraphe3']}</p>
+<p> #{msg['page-about.form.paragraphe4']}</p>
+<p> #{msg['page-about.form.paragraphe5']}</p>  
+<p>#{msg['page-about.form.paragraphe6']}</p>
+<br></br>
+</div>
+</div>
+
+<br></br><br></br>
+<p>#{msg['page-about.form.paragraphe7']}</p>
+<p>84 quai Joseph Gillet - 69004 Lyon</p>
+
+<br></br>
+<p><u>#{msg['page-about.form.paragraphe8']}</u> </p>
+
+<br></br>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2782.1444895996906!2d4.817439902076508!3d45.78833294178045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eb3b87fa4ff9%3A0xb0846744313be70e!2s84%20Quai%20Joseph%20Gillet%2C%2069004%20Lyon!5e0!3m2!1sfr!2sfr!4v1572521379303!5m2!1sfr!2sfr" width="400" height="400" frameborder="0" style="border:0;" ></iframe>
+
+<br></br>
+
+<p>Bus 40 (#{msg['page-about.form.paragraphe9']} Lyon Plage)</p>
+<p>TER (#{msg['page-about.form.paragraphe9']} Gare de Vaise)</p>
+<p>Metro D (#{msg['page-about.form.paragraphe9']} Gare de Vaise)</p>
+<br></br><br></br>
+<p><u>#{msg['page-about.form.paragraphe10']} </u></p>
+
+
+
+	<h:form style="text-align : center">
+	
+		<div class="container">
+		<div id="formulaire">
+	
+		<h3><i>#{msg['page-about.form.paragraphe11']}</i></h3>
+       <p:inputText/>
+   		<h3><i>#{msg['page-about.form.paragraphe12']}</i></h3>
+   		<p:inputText/>
+   		<h3><i>#{msg['page-about.form.paragraphe13']}</i></h3>
+   		<p:inputTextarea cols="70" rows="10"/>
+	
+	
+		</div>
+		
+		</div>
+	
+	
+	
+	</h:form>
+	
+	<ui:include src="footer_client.xhtml"></ui:include>
+	
+	</div>
+	
+	
+</h:body>
+
+</html>

@@ -1,0 +1,80 @@
+div {
+	text-align: center;
+	color: black;
+}
+
+#bandeau {
+	width: all;
+	height: 50px;
+	background-color: #FFCCFF;
+}
+
+#menug {
+	float: left;
+	width: 20%;
+	height: 400px;
+	background-color: #FF6699;
+}
+
+#menud {
+	float: right;
+	width: 20%;
+	height: 400px;
+	background-color: #FF6699;
+}
+
+#contenu {
+	float: middle width:100%;
+	background-color: #C8DEE9;
+}
+
+#pied_page {
+	clear: both;
+	width: all;
+	height: 50px;
+	background-color: #33FF99;
+}
+
+.container {
+	padding-right: 20%;
+	padding-left: 20%;
+	margin-right: auto;
+	margin-left: auto;
+	display: flex;
+	flex-direction : row;
+	
+}
+#formulaire {
+	background: #ffffff;
+	border-radius: 20px;
+
+}
+
+.contact-form input, .contact-form textarea {
+	width: 50%;
+	height: 44px;
+	border: none;
+	padding: 0 18px;
+	background: #f0f0f0;
+	border-radius: 40px;
+	margin-bottom: 17px;
+	font-size: 14px;
+}
+
+#site-btn {
+	display: inline-block;
+	border: none;
+	font-size: 14px;
+	font-weight: 600;
+	min-width: 167px;
+	padding: 18px 47px 14px;
+	border-radius: 50px;
+	text-transform: uppercase;
+	background: ##F19019;
+	color: #F0C300;
+	line-height: normal;
+	cursor: pointer;
+	text-align: center;
+}
+
+

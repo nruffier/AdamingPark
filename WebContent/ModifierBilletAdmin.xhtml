@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+<h:head>
+	<title>Modifier billet</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css"></link>
+	<!--Made by Aurélien-->
+</h:head>
+<h:body>
+<ui:include src="header_admin.xhtml"/>
+<div id="contenu">
+<div class="container">
+	<h3>Modifier un billet</h3>
+	<h:form class="contact-form" id="formulaire">
+	
+	<h:panelGrid columns="3" cellpadding="5">
+						<p:outputLabel value="Nom :" />
+						<p:inputText id="nom" value="#{AchatMB.nom}" validatorMessage="#{msg['page.form.validate'] }" requiredMessage="#{msg['page.form.required'] }" />
+						<h:message for="nom"></h:message>
+						
+						<p:outputLabel value="Prenom :" />
+						<p:inputText id="prenom" value="#{AchatMB.prenom}" validatorMessage="#{msg['page.form.validate'] }" requiredMessage="#{msg['page.form.required'] }" />
+						<h:message for="prenom"></h:message>
+						 
+						<p:outputLabel value="Email :" />
+						<p:inputText id="email" value="#{AchatMB.email}" validatorMessage="#{msg['page.form.validate'] }" requiredMessage="#{msg['page.form.required'] }"/>
+						<h:message for="email"></h:message>
+						
+						<p:outputLabel value="Télephone :" />
+						<p:inputText id="tel" value="#{AchatMB.tel}" validatorMessage="#{msg['page.form.validate'] }" requiredMessage="#{msg['page.form.required'] }"/>
+						<h:message for="tel"></h:message>
+
+						<p:outputLabel value="Date de début :" />
+						<p:calendar id="popup" value="#{AchatMB.dateDebut}" validatorMessage="#{msg['page.form.validate'] }" requiredMessage="#{msg['page.form.required'] }"/>
+						<h:message for="popup"></h:message>
+						
+						<p:outputLabel value="Date de fin :" />
+						<p:calendar id="popup1" value="#{AchatMB.dateFin}"validatorMessage="#{msg['page.form.validate'] }" requiredMessage="#{msg['page.form.required'] }"/>
+						<h:message for="popup1"></h:message>
+						
+						<h:outputLabel value="Nombre de billets adultes" />
+						<p:spinner id="normal" value="#{AchatMB.normal}" min="0" validatorMessage="#{msg['page.form.validate'] }" requiredMessage="#{msg['page.form.required'] }"/>
+						<h:message for="normal"></h:message>
+						
+						<h:outputLabel value="Nombre de billets tarif réduit" />
+						<p:spinner id="reduit" value="#{AchatMB.reduit}" min="0" validatorMessage="#{msg['page.form.validate'] }" requiredMessage="#{msg['page.form.required'] }"/>
+						<h:message for="reduit"></h:message>
+							
+					</h:panelGrid>
+		<br></br>
+		<div><h:commandButton id="site-btn" value="Modifier" action="#{achatMB.modifier}"/></div>
+	</h:form>
+	</div>
+	<div style="height:30px"></div>
+</div>
+<ui:include src="footer_admin.xhtml"/>
+</h:body>
+</html>

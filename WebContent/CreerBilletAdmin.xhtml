@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+<h:head>
+	<title>#{msg['page-ticket-admin.create.form.title']}</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css"></link>
+	<!--Made by Aurélien-->
+</h:head>
+<h:body>
+<ui:include src="header_admin.xhtml" />
+<div id="contenu">
+<div class="container">
+	<h3>#{msg['page-ticket-admin.create.form.title']}</h3>
+	<h:form class="contact-form" id="formulaire">
+	
+	<h:panelGrid columns="3" cellpadding="5">
+						<p:outputLabel value="#{msg['page-ticket-admin.create.form.name']}" />
+						<p:inputText id="nom" value="#{achatMB.nom}" validatorMessage="#{msg['page.form.validate'] }" required="true" requiredMessage="#{msg['page.form.required'] }" />
+						<h:message for="nom"></h:message>
+						
+						<p:outputLabel value="#{msg['page-ticket-admin.create.form.firstname']}" />
+						<p:inputText id="prenom" value="#{achatMB.prenom}" validatorMessage="#{msg['page.form.validate'] }" required="true" requiredMessage="#{msg['page.form.required'] }" />
+						<h:message for="prenom"></h:message>
+						 
+						<p:outputLabel value="Email :" />
+						<p:inputText id="email" value="#{achatMB.email}" validatorMessage="#{msg['page.form.validate'] }"  required="true" requiredMessage="#{msg['page.form.required'] }"/>
+						<h:message for="email"></h:message>
+						
+						<p:outputLabel value="#{msg['page-ticket-admin.create.form.phone']}" />
+						<p:inputText id="tel" value="#{achatMB.tel}" validatorMessage="#{msg['page.form.validate'] }" required="true" requiredMessage="#{msg['page.form.required'] }"/>
+						<h:message for="tel"></h:message>
+
+						<p:outputLabel value="#{msg['page-ticket-admin.create.form.startdate']}" />
+						<p:calendar id="popup" value="#{achatMB.dateDebut}" validatorMessage="#{msg['page.form.validate'] }" required="true" requiredMessage="#{msg['page.form.required'] }"/>
+						<h:message for="popup"></h:message>
+						
+						<p:outputLabel value="#{msg['page-ticket-admin.create.form.enddate']}" />
+						<p:calendar id="popup1" value="#{achatMB.dateFin}" validatorMessage="#{msg['page.form.validate'] }" required="true" requiredMessage="#{msg['page.form.required'] }"/>
+						<h:message for="popup1"></h:message>
+						
+						<h:outputLabel value="#{msg['page-ticket-admin.create.form.adultticketnumber']}" />
+						<p:spinner id="normal" value="#{achatMB.normal}" min="0" validatorMessage="#{msg['page.form.validate'] }" required="true" requiredMessage="#{msg['page.form.required'] }"/>
+						<h:message for="normal"></h:message>
+						
+						<h:outputLabel value="#{msg['page-ticket-admin.create.form.discountticketnumber']}" />
+						<p:spinner id="reduit" value="#{achatMB.reduit}" min="0" validatorMessage="#{msg['page.form.validate'] }" required="true" requiredMessage="#{msg['page.form.required'] }"/>
+						<h:message for="reduit"></h:message>
+							
+					</h:panelGrid>
+		<br></br>
+		<div><h:commandButton class="site-btn" value="#{msg['page-ticket-admin.create.form.create']}" action="#{achatMB.acheter}"/></div>
+	</h:form>
+	</div>
+	<div style="height:30px"></div>
+</div>
+<ui:include src="footer_admin.xhtml" />
+</h:body>
+</html>

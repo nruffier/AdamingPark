@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+<h:head>
+	<title>#{msg['page-attraction-show.title']}</title>
+	
+<link rel="stylesheet" type="text/css" href="css/style.css"></link>
+
+</h:head>
+<h:body>
+<ui:include src="header_admin.xhtml" />
+
+<div id="contenu">
+<div class="container">
+
+	<h3>#{msg['page-attraction-show.title']}</h3>
+	
+	<h:form>
+	
+	<h:dataTable class="tableau" id="customers" value = "#{attractionMB.afficher()}" var = "attraction">
+	  
+   <h:column>    				
+      <f:facet name = "header">#{msg['page-attraction-show.name']}</f:facet>    				
+      <h:outputText value="#{attraction.nom}" />
+   </h:column>
+   
+   <h:column>    				
+      <f:facet name = "header">#{msg['page-attraction-show.status']}</f:facet>  
+      <h:outputText value="#{attraction.statut}" />  				
+   </h:column>
+   
+   <h:column>    				
+      <f:facet name = "header">Information</f:facet>  
+      <h:outputText value="#{attraction.info}" />  				
+   </h:column>
+   
+       <h:column>    				
+      <f:facet name = "header"></f:facet>    				   
+   	<h:commandbutton id="site-btn-modify" value="#{msg['page-attraction-show.modify']}" action="#{attractionMB.modifier(attraction)}"></h:commandbutton>
+   </h:column>
+   
+    <h:column>    				
+      <f:facet name = "header"></f:facet>   				   
+   	<h:commandbutton id="site-btn-delete" value="#{msg['page-attraction-show.delete']}" action="#{attractionMB.supprimer(attraction)}" update="@form"></h:commandbutton>
+   </h:column> 
+</h:dataTable>  
+</h:form>
+</div>
+</div>
+<ui:include src="footer_admin.xhtml" />
+</h:body>
+</html>

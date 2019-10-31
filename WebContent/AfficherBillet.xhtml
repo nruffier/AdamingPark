@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<h:head>
+	<title>#{msg['page-AfficherBillet.title']}</title>
+	<!-- Fait par Jean-Baptiste (et Dylan a fait le lien avec le back-end) -->
+</h:head>
+
+<h:body>
+
+	<!-- ========================= Header ========================= -->
+	<ui:include src="header_admin.xhtml" />
+	<!-- ========================= Header //END ========================= -->
+
+
+	<!-- ========================= Tableau ========================= -->
+	<div>
+		<h1>#{msg['page-AfficherBillet.header']}</h1>
+	</div>
+
+	<h:form>
+
+		<p:dataTable value="#{affbilletMB.afficher()}" var="billet"
+			widgetVar="TypeTarif" emptyMessage="#{msg['page-AfficherBillet.form.empty']}"
+			filteredValue="#{affbilletMB.filtered}">
+
+			<p:column filterBy="#{billet.id}" headerText="#{msg['page-AfficherBillet.form.id']}"
+				filterMatchMode="contains">
+				<h:outputText value="#{billet.id}">
+				</h:outputText>
+
+			</p:column>
+
+			<p:column filterBy="#{billet.prix}" headerText="#{msg['page-AfficherBillet.form.prix']}"
+				filterMatchMode="contains">
+				<h:outputText value="#{billet.prix}" />
+
+			</p:column>
+
+			<p:column filterBy="#{billet.dateAchat}" headerText="#{msg['page-AfficherBillet.form.dateAchat']}"
+				filterMatchMode="contains">
+
+				<h:outputText value="#{billet.dateAchat}" />
+			</p:column>
+
+			<p:column filterBy="#{billet.dateDebut}" headerText="#{msg['page-AfficherBillet.form.dateDebut']}"
+				filterMatchMode="contains">
+				<h:outputText value="#{billet.dateDebut}" />
+			</p:column>
+
+			<p:column filterBy="#{billet.dateFin}" headerText="#{msg['page-AfficherBillet.form.dateFin']}"
+				filterMatchMode="contains">
+				<h:outputText value="#{billet.dateFin}" />
+			</p:column>
+
+			<p:column filterBy="#{billet.type}" headerText="#{msg['page-AfficherBillet.form.type']}"
+				filterMatchMode="contains">
+				<h:outputText value="#{billet.type.getNom()}" />
+			</p:column>
+
+			<p:column filterBy="#{billet.client}" headerText="#{msg['page-AfficherBillet.form.nomClient']}"
+				filterMatchMode="contains">
+				<h:outputText value="#{billet.client.getNom()}" />
+			</p:column>
+
+			<p:column filterBy="#{billet.client}" headerText="#{msg['page-AfficherBillet.form.prenomClient']}"
+				filterMatchMode="contains">
+				<h:outputText value="#{billet.client.getPrenom()}" />
+			</p:column>
+
+			<p:column filterBy="#{billet.client}" headerText="#{msg['page-AfficherBillet.form.emailClient']}"
+				filterMatchMode="contains">
+				<h:outputText value="#{billet.client.getEmail()}" />
+			</p:column>
+
+			<p:column filterBy="#{billet.client}" headerText="#{msg['page-AfficherBillet.form.telephoneClient']}"
+				filterMatchMode="contains">
+				<h:outputText value="#{billet.client.getTel()}" />
+			</p:column>
+
+		</p:dataTable>
+	</h:form>
+	<!-- ========================= Tableau //END ========================= -->
+	
+	
+	<!-- ========================= Footer ========================= -->
+	<ui:include src="footer_admin.xhtml" />
+	<!-- ========================= Footer //END ========================= -->
+	
+	
+</h:body>
+
+</html>

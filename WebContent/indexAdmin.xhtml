@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<h:head>
+	<link rel="stylesheet" type="text/css" href="css/style.css"></link>
+	<title>#{msg['page-indexAdmin.title']}</title>
+	<!-- Fait par Jean-Baptiste (et Dylan a fait le lien avec le back-end) -->
+</h:head>
+
+<h:body>
+
+	<!-- ========================= Header ========================= -->
+	<ui:include src="header_admin.xhtml" />
+	<!-- ========================= Header //END ========================= -->
+
+
+	<!-- ========================= Tableau de bord ========================= -->
+	<h:form id="form">
+	
+		
+		
+		
+		<p:dataGrid var="car2" value="#{countMB.afficherBillet()}"  columns="2"
+			 rows="4" id="cars2">
+			 
+			 <f:facet name="header">
+	            <h1> #{msg['page-indexAdmin.form.header']} </h1> 
+        	</f:facet>
+
+			
+
+			<p:panel header="#{msg['page-indexAdmin.form.billetsVendus']}" style="text-align:center">
+				<h:panelGrid columns="1" style="width:100%">
+					
+					<h:outputText value="#{countMB.afficherBillet()}" />
+				
+				</h:panelGrid>
+			</p:panel>
+						
+		</p:dataGrid>
+		
+		
+		<p:dataGrid var="car3" value="#{countMB.afficherClient()}"  columns="2"
+			 rows="4" id="cars3">
+
+			
+
+			<p:panel header="#{msg['page-indexAdmin.form.clients']}" style="text-align:center">
+				<h:panelGrid columns="1" style="width:100%">
+					
+					<h:outputText value="#{countMB.afficherClient()}" />
+				
+				</h:panelGrid>
+			</p:panel>
+						
+		</p:dataGrid>
+		
+		
+		<p:dataGrid var="car4" value="#{countMB.afficherAttraction()}"  columns="2"
+			 rows="4" id="cars4">
+
+			
+
+			<p:panel header="#{msg['page-indexAdmin.form.attractions']}" style="text-align:center">
+				<h:panelGrid columns="1" style="width:100%">
+					
+					<h:outputText value="#{countMB.afficherAttraction()}" />
+				
+				</h:panelGrid>
+			</p:panel>
+						
+		</p:dataGrid>
+		
+		
+		<p:dataGrid var="car1" value="#{countMB.afficherCandidat()}"  columns="2"
+			 rows="4" id="cars1">
+
+			<p:panel header="#{msg['page-indexAdmin.form.candidatures']}" style="text-align:center">
+				<h:panelGrid columns="1" style="width:100%">
+					
+					<h:outputText value="#{countMB.afficherCandidat()}" />
+				
+				</h:panelGrid>
+			</p:panel>
+						
+		</p:dataGrid>
+		
+		
+		
+		
+		
+	</h:form>
+	<!-- ========================= Tableau de bord //END ========================= -->
+
+
+	<!-- ========================= Footer ========================= -->
+	<ui:include src="footer_admin.xhtml" />
+	<!-- ========================= Footer //END ========================= -->
+	
+</h:body>
+
+</html>

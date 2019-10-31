@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+<h:head>
+	<title>#{msg['page-application-show.title']}</title>
+	
+<link rel="stylesheet" type="text/css" href="css/style.css"></link>
+<!--Made by Aurélien-->
+</h:head>
+<h:body>
+
+<ui:include src="header_admin.xhtml" />
+
+<div id="contenu">
+<div class="container">
+
+	<h3>#{msg['page-application-show.title']}</h3>
+	<h:form >
+	
+	<p:dataTable value = "#{candidat.afficher()}" emptyMessage="#{msg['page-application-show.norecord']}" var = "candidat" filteredValue="#{affcandidatMB.filtered}">
+	  
+   <p:column filterBy="#{candidat.nom}" filterMatchMode="contains">    				
+      <f:facet name = "header">#{msg['page-application-show.name']}</f:facet>    				
+      <h:outputText value="#{candidat.nom}" />
+   </p:column>
+   
+    <p:column filterBy="#{candidat.prenom}" filterMatchMode="contains">    				
+      <f:facet name = "header">#{msg['page-application-show.firstname']}</f:facet>    				
+      <h:outputText value="#{candidat.prenom}" />
+   </p:column>
+   
+    <p:column filterBy="#{candidat.email}" filterMatchMode="contains">    				
+      <f:facet name = "header">E-Mail</f:facet>    				
+      <h:outputText value="#{candidat.email}" />
+   </p:column>
+   
+    <p:column filterBy="#{candidat.tel}" filterMatchMode="contains">    				
+      <f:facet name = "header">#{msg['page-application-show.phone']}</f:facet>    				
+      <h:outputText value="#{candidat.tel}" />
+   </p:column>
+  
+    <p:column filterBy="#{candidat.cv}" filterMatchMode="contains">    				
+      <f:facet name = "header">#{msg['page-application-show.resume']}</f:facet>    				
+      <h:outputText value="#{candidat.cv}" />
+   </p:column>  
+
+   <p:column filterBy="#{candidat.lm}" filterMatchMode="contains">    				
+      <f:facet name = "header">#{msg['page-application-show.applicationletter']}</f:facet>    				
+      <h:outputText value="#{candidat.lm}" />
+   </p:column>    
+
+   
+     <h:column>    				
+      <f:facet name = "header"></f:facet>    				   
+   	<h:button id="site-btn-delete" value="#{msg['page-application-show.delete']}" action="candidat.supprimer()"></h:button>
+   </h:column>
+   
+</p:dataTable>
+	</h:form>
+	</div>
+	</div>
+	<ui:include src="footer_admin.xhtml" />
+</h:body>
+</html>

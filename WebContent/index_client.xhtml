@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<h:head>
+	<title>index_client</title>
+	<link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/index.css" />
+	<!-- theo corneloup -->
+</h:head>
+
+<h:body>
+<ui:include src="header_client.xhtml"/>
+	<div class="affichage">
+	<div style="height: 100px"></div>
+	
+		<div class="attraction">
+			<a href="attraction_client.xhtml" target="_self">
+			 <p:panelGrid styleClass="ui-noborder" columns="2">
+					<p:graphicImage name="images/montagne_russe.jpg" style="height:250px; width:80%; border-radius:20px" />
+					<h1 ><u><i>#{msg['page-index_client.titreAttraction']}</i></u></h1>
+					<h3>#{msg['page-index_client.descAttraction']}</h3>
+			</p:panelGrid>
+			</a>
+		</div>
+	
+		<div style="height: 100px"></div>
+		<div class="Billeterie">
+			<a href="achatBillet.xhtml" target="_self"> 
+				<p:panelGrid columns="2" styleClass="ui-noborder">
+					<h1><u><i>#{msg['page-index_client.titreBillet']}</i></u></h1>
+					<h3>#{msg['page-index_client.descBillet']}</h3>
+					<p:graphicImage name="images/billet.jpg"
+						style="height:250px; width:100%; border-radius:20px"/>
+				</p:panelGrid>
+			</a>
+		</div>
+		<div style="height: 100px"></div>
+		<div class="candidat">
+		<a href="candidature.xhtml" target="_self">
+			<p:panelGrid columns="2" styleClass="ui-noborder">
+					<p:graphicImage name="images/rejoindre.jpg"
+						style="height:250px; width:400px; border-radius:20px" />
+					<h1><u><i>#{msg['page-index_client.titreRejoindre']}</i></u></h1>
+					<h3>#{msg['page-index_client.descRejoindre']}</h3>
+			</p:panelGrid>
+		</a>
+		</div>
+		<div style="height: 100px"></div>
+		<div class="info">
+			<a href="about.xhtml" target="_self"> 
+			<p:panelGrid columns="2" styleClass="ui-noborder">
+					<h1><u><i>#{msg['page-index_client.titreContact']}</i></u></h1>
+					<h3>#{msg['page-index_client.descContact']}</h3>
+					<p:graphicImage name="images/contact.png"
+						style="height:200px; width:300px; border-radius:20px" />
+				</p:panelGrid>
+			</a>
+			<div style="height: 100px"></div>
+		</div>
+	</div>
+<ui:include src="footer_client.xhtml"/>
+</h:body>
+
+</html>

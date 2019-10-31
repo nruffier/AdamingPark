@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--Ambroise RENE  -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<h:head>
+	<title>header</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script type="text/javascript" src="js/test.js"></script>
+	<style>video{
+  position: fixed; right: 0; bottom: 0;
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto; z-index: -100;
+  background: url(polina.jpg) no-repeat;
+  background-size: cover;
+}</style>
+</h:head>
+
+<h:body>
+	<div class="ui-g">
+
+		<div class="ui-g-11">
+		<video autoplay="autoplay" loop="infinite" onclick="gvjp()">
+		<source src ="video/js.mp4"></source>
+		</video>
+			<h:graphicImage value="img/client/header/adaming-land.png" onclick="gsjp()"/>
+		</div>
+		<div class="ui-g-1">
+			<h:form>
+				<p:commandLink action="#{langageMB.change('en')}" update="@all">
+					<h:graphicImage width="50px" value="img/client/header/en.png" />
+				</p:commandLink>
+
+				<p:commandLink action="#{langageMB.change('fr')}" update="@all">
+					<h:graphicImage width="55px" value="img/client/header/fr.jpg" />
+				</p:commandLink>
+			</h:form>
+		</div>
+	</div>
+
+
+	<hr></hr>
+
+	<p:breadCrumb style="text-align :justify">
+		<p:menuitem value="#{msg['page-header_client.accueil']}" url="index_client.xhtml" />
+		<p:menuitem value="#{msg['page-header_client.attraction']}" url="€#" />
+		<p:menuitem value="#{msg['page-header_client.billet']}" url="achatBillet.xhtml" />
+		<p:menuitem value="#{msg['page-header_client.rejoindre']}" url="candidature.xhtml" />
+		<p:menuitem value="#{msg['page-header_client.contact']}" url="about.xhtml" />
+		<p:menuitem value="#{msg['page-header_client.propos']}" url="about.xhtml" />
+	</p:breadCrumb>
+
+
+	<hr></hr>
+
+</h:body>
+
+</html>
