@@ -93,7 +93,7 @@ Développeurs :
 	- Thibaud Guilard
 	- Jean-baptiste Jamet
 	- Aurélien Journet
-	- Ambroise Rene
+	- Ambroise Réné
 	- Dylan Salos
 	- Guillaume Vittoz
 
